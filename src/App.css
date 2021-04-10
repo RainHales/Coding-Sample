@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+.panels > div{
+  border: 1px solid black; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.panels {
+  display: grid; 
+  grid-gap: 0px; 
+  grid-template-columns: 155px auto auto;
+  grid-template-rows: auto auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.panels button{
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 0px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.panels .panel-info button{
+  margin-left: 15px;
+  background: rgb(255, 161, 19);
 }
 
-.App-link {
-  color: #61dafb;
+.panels button:hover {
+  background: #ccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.panel-info {
+  grid-row: span 2; 
+}
+
+.panel-positions {
+  grid-row: span 2; 
+}
+
+.panel-info .search-container {
+  float: right;
+}
+
+.panel-info input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.panel-info .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.panel-info .search-container button:hover {
+  background: #ccc;
+}
+
+.vehicleTable{
+  margin: 15px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+  padding-right: 20px;
+}
+
+.Number{
+  padding: 5px;
 }
