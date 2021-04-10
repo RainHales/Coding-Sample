@@ -1,10 +1,9 @@
-const Express = require("express");
+const Express = require('express');
 const BodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectId = require("mongodb").ObjectID;
 const CONNECTION_URL = "mongodb+srv://Rain:meme123@car-sample.i155q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const DATABASE_NAME = "Cars";
-
 
 var app = Express();
 app.use(BodyParser.json());
@@ -24,7 +23,7 @@ app.listen(5000, () => {
 });
 
 //Query database for information 
-app.get("/cars", (request, response) => {
+app.get("/cars", (request, response, next) => {
     collection.find({}).toArray((error, result) => {
         if(error) {
             return response.status(500).send(error);
